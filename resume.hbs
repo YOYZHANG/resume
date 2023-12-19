@@ -97,12 +97,12 @@
                           <strong>{{displayName}}</strong>&nbsp
                           {{#if githubUrl}}
                             <a href="{{githubUrl}}" class='icon' target="_blank">
-                              <iconify-icon icon="{{toSocialIcon 'github'}}"></iconify-icon>
+                              <iconify-icon icon="{{toSocialIcon 'GitHub'}}"></iconify-icon>
                             </a>
                           {{/if}}
                           {{#if website}}
                             <a href="{{website}}" class='icon' target="_blank">
-                              <iconify-icon icon="{{toSocialIcon 'linkin'}}"></iconify-icon>
+                              <iconify-icon icon="{{toSocialIcon 'link'}}"></iconify-icon>
                             </a>
                           {{/if}}
                         </p>
@@ -135,7 +135,7 @@
                         </p>
                         <p class="text-muted">
                           <small>
-                            <span class="space-right"> {{startDate}} - {{#if endDate}}{{endDate}}{{else}}Present{{/if}} | {{location}}</span>
+                            <span class="space-right"> {{getBuildDate startDate}} - {{#if endDate}}{{getBuildDate endDate}}{{else}}Present{{/if}} | {{location}}</span>
                           </small>
                         </p>
                         <p>{{summary}}</p>
@@ -177,7 +177,7 @@
                       </p>
                       <p class="text-muted clear-margin-sm">
                         <small>
-                          {{startDate}} - {{#if endDate}} {{endDate}} {{else}} Currently Pursuing {{/if}}
+                          {{getBuildDate startDate}} - {{#if endDate}} {{getBuildDate endDate}} {{else}} Currently Pursuing {{/if}}
                         </small>
                       </p>
                       <div>{{description}}</div>
@@ -305,7 +305,7 @@
             {{/if}}
 
             <div style="text-align:center">
-              <div class="detail no-print" style="font-size:1.5rem;margin-top:2rem;">
+              <div class="detail no-print" style="margin-top:2rem;">
                 <a href="https://resume.antfu.me/resume.pdf" class="info" itemprop="pdf" target="_blank">
                   PDF Version
                 </a>

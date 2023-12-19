@@ -55,6 +55,14 @@
       "website": "https://vitest.dev/",
       "githubUrl": "https://github.com/vitest-dev/vitest",
       "primaryLanguage": "TypeScript"
+    },
+    {
+      "name": "vitest/vitest1",
+      "displayName": "Vitest",
+      "summary": "A blazing fast unit test framework powered by Vite.",
+      "website": "https://vitest.dev/",
+      "githubUrl": "https://github.com/vitest-dev/vitest",
+      "primaryLanguage": "TypeScript"
     }
   ],
   "work": [
@@ -75,26 +83,6 @@
         "Authored a  sdk that generate plugins for ai hosts according to a set of protocols",
         "Enhance the performance of the Mini Program to achieve instant loading."
       ]
-    },
-    {
-      "company": "Tencent.",
-      "position": "Front-end Development Intern",
-      "website": "https://www.tencent.com/",
-      "location": "Shenzhen, China",
-      "summary": "In Product R & D  Department",
-      "highlights": [
-        ""
-      ],
-      "startDate": "2018-06-01",
-      "endDate": "2018-09-01",
-      "start": {
-        "year": 2018,
-        "month": 6
-      },
-      "end": {
-        "year": 2018,
-        "month": 9
-      }
     }
   ],
   "education": [
@@ -144,7 +132,7 @@
       "fluency": "Native speaker"
     }, {
       "language": "English",
-      "fluency": "Fluency"
+      "fluency": "Fluent"
     }
   ],
   "interests": [],

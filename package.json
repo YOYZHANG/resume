@@ -5,8 +5,8 @@
   "packageManager": "pnpm@8.6.12",
   "description": "yoyzhang's resume",
   "scripts": {
-    "build": "ts-node-esm scripts/build.ts",
-    "dev": "ts-node-esm scripts/server.ts"
+    "build": "tsx scripts/build.ts",
+    "dev": "tsx scripts/server.ts"
   },
   "author": "",
   "license": "ISC",
@@ -14,12 +14,14 @@
     "@types/fs-extra": "^11.0.4",
     "fs-extra": "^11.2.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.6.2",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "axios": "^1.6.2",
     "chalk": "^5.3.0",
     "handlebars": "^4.7.8",
+    "moment": "^2.29.4",
     "puppeteer": "^21.6.1"
   }
 }

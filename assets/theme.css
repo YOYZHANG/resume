@@ -157,9 +157,6 @@ a:focus {
   padding: 2px 12px 0 3px;
   font-weight: bold;
 }
-.background-card h4:not(:first-child) {
-  margin-top: 2em;
-}
 .content {
   line-height: 1.5;
 }
