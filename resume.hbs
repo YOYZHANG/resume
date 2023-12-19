@@ -6,8 +6,9 @@
   <link rel="icon" href="" type="image/png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <title>yoyzhang's resume</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC|Nunito+Sans:400,700&display=swap" rel="stylesheet">
+   <style>{{{css}}}</style>
 </html>
 <body itemscope itemtype="http://schema.org/Person">
    <div class="container">
@@ -62,7 +63,7 @@
               <div class="social-links">
                 {{#profiles}}
                   <a class="social-link icon" href="{{url}}" target="_blank">
-                    <span class="iconify" data-icon="{{toSocialIcon network}}"></span>
+                     <iconify-icon icon="{{toSocialIcon network}}"></iconify-icon>
                     <!--<span class="social-link-text print-only">{{username}}</span>-->
                   </a>
                 {{/profiles}}
@@ -96,24 +97,18 @@
                           <strong>{{displayName}}</strong>&nbsp
                           {{#if githubUrl}}
                             <a href="{{githubUrl}}" class='icon' target="_blank">
-                              <span class="iconify" data-icon="{{toSocialIcon 'github'}}"></span>
+                              <iconify-icon icon="{{toSocialIcon 'github'}}"></iconify-icon>
                             </a>
                           {{/if}}
                           {{#if website}}
                             <a href="{{website}}" class='icon' target="_blank">
-                              <span class="iconify" data-icon="{{toSocialIcon 'link'}}"></span>
+                              <iconify-icon icon="{{toSocialIcon 'linkin'}}"></iconify-icon>
                             </a>
                           {{/if}}
                         </p>
                         <p class="text-muted">
                           <small> {{summary}} </small>
                         </p>
-                        {{#if githubUrl}}
-                          <p class="github-stars">
-                            <span class="iconify" data-icon="ri:star-fill"></span>
-                            <span class="stars" data-gh-api="{{getGithubApi githubUrl}}">{{stars}}</span>
-                          </p>
-                        {{/if}}
                       </div>
                     </li>
                   {{/each}}
@@ -320,7 +315,6 @@
                   Online Version
                 </a>
               </div>
-              <div style="opacity:0.7; font-size:1.2rem;margin-top:1rem;">Last updated at {{getBuildDate ''}}</div>
             </div>
           </div>
         </div>

@@ -1,0 +1,152 @@
+{
+  "basics": {
+    "name": "zhang xiaoqian",
+    "picture": "",
+    "label": "Software Engineer",
+    "headline": "The hymn of humanity is the hymn of courage.",
+    "summary": "My name is Zhangxiaoqian, a software engineer currently working at Baidu, focusing on the Mini Program runtime framework and compiler. ",
+    "website": "https://blog.zhangxiaoqian.me",
+    "address": "",
+    "projects_url": "https://blog.zhangxiaoqian.me/project",
+    "username": "zhangxiaoqian",
+    "email": "alexuzhang@gmail.com",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "yoyzhang",
+        "url": "https://github.com/YOYZHANG"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin",
+        "username": "zhangxiaoqian"
+      },
+      {
+        "network": "Twitter",
+        "url": "https://twitter.com/alexu19049062",
+        "username": "alexu"
+      },
+      {
+        "network": "maston",
+        "username": "beans",
+        "url": "https://mastodon.social/@zhangxiaoqian"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Vue",
+        "Node",
+        "Vite"
+      ],
+      "level": "Senior",
+      "name": "Frontend"
+    }    
+  ],
+  "projects": [
+    {
+      "name": "vitest/vitest",
+      "displayName": "Vitest",
+      "summary": "A blazing fast unit test framework powered by Vite.",
+      "website": "https://vitest.dev/",
+      "githubUrl": "https://github.com/vitest-dev/vitest",
+      "primaryLanguage": "TypeScript"
+    }
+  ],
+  "work": [
+    {
+      "company": "Baidu",
+      "position": "Software Engineer",
+      "website": "https://baidu.com/",
+      "location": "Beijing, China",
+      "isCurrentRole": true,
+      "startDate": "2019-07-01",
+      "start": {
+        "year": 2019,
+        "month": 7
+      },
+      "end": {},
+      "highlights": [
+        "Authored the redesign and development of the Mini Program compilation architecture",
+        "Authored a  sdk that generate plugins for ai hosts according to a set of protocols",
+        "Enhance the performance of the Mini Program to achieve instant loading."
+      ]
+    },
+    {
+      "company": "Tencent.",
+      "position": "Front-end Development Intern",
+      "website": "https://www.tencent.com/",
+      "location": "Shenzhen, China",
+      "summary": "In Product R & D  Department",
+      "highlights": [
+        ""
+      ],
+      "startDate": "2018-06-01",
+      "endDate": "2018-09-01",
+      "start": {
+        "year": 2018,
+        "month": 6
+      },
+      "end": {
+        "year": 2018,
+        "month": 9
+      }
+    }
+  ],
+  "education": [
+    {
+      "institution": "Wuhan University, Wuhan",
+      "area": "Geographic Information System",
+      "studyType": "Master of Science",
+      "startDate": "2016-09-01",
+      "endDate": "2019-06-01",
+      "start": {
+        "year": 2016,
+        "month": 9
+      },
+      "end": {
+        "year": 2019,
+        "month": 6
+      },
+      "description": "",
+      "activities": "",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Wuhan University, Wuhan",
+      "area": "Geographic Information System",
+      "studyType": "Bachelor of Science",
+      "startDate": "2012-09-01",
+      "endDate": "2016-06-01",
+      "start": {
+        "year": 2012,
+        "month": 9
+      },
+      "end": {
+        "year": 2016,
+        "month": 6
+      },
+      "description": "",
+      "activities": "",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "volunteer": [],
+  "languages": [
+    {
+      "language": "Chinese",
+      "fluency": "Native speaker"
+    }, {
+      "language": "English",
+      "fluency": "Fluency"
+    }
+  ],
+  "interests": [],
+  "references": []
+}

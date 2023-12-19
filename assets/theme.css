@@ -55,7 +55,7 @@ body {
 @media only screen {
   .container {
     display: grid;
-    grid-template-columns: auto 15fr 50fr auto;
+    grid-template-columns: 15fr 50fr;
   }
   .container .page {
     max-width: 50em;

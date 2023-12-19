@@ -1,20 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "baseUrl": "./src",
-    "outDir": "./dist",
-    "sourceMap": true
+      "target": "es2017",
+      "moduleResolution": "node",
+      "module": "ESNext",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+
+      "exactOptionalPropertyTypes": true,
+      "allowUnreachableCode": false,
+      "allowImportingTsExtensions": true,
+      "noEmit": true,
+      "strict": true,
+      "noImplicitOverride": true,
+      "noImplicitReturns": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "noUncheckedIndexedAccess": true,
+      "noUnusedLocals": true,
+      "skipLibCheck": true,
+      "resolveJsonModule": true,
   },
-  "include": [
-    "src", "scripts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src", "scripts"]
 }
