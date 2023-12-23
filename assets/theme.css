@@ -52,6 +52,14 @@ body {
 .name-and-profession .job {
   margin-bottom: 0.5rem;
 }
+.hightlight-container .subtitle {
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.hightlight-container {
+  margin-top: -0.3rem;
+  opacity: 0.8;
+}
 @media only screen {
   .container {
     display: grid;
@@ -165,7 +173,7 @@ a:focus {
   padding: 2em 3.5em;
 }
 .card-nested {
-  padding: 0.8rem 0 0.8rem 2rem;
+  padding: 0 0 0.8rem 2rem;
 }
 .card-nested.relax {
   padding-top: 1.5rem;
@@ -186,9 +194,7 @@ a:focus {
 }
 .projects {
   padding: 1rem 0;
-}
-.projects .text-muted {
-  margin-bottom: 0.4rem;
+  margin-right: 2.5rem;
 }
 .projects .icon {
   margin-right: 2px;
@@ -238,12 +244,12 @@ a:focus {
     font-size: inherit;
   }
 }
-@media print {
-  .name-and-profession .name {
-    margin-top: -2rem;
+@media (max-width: 769px) {
+  #work-experience {
+    margin-left: 3rem;
   }
   .page {
-    margin-top: -4rem;
+    margin-top: -1.5rem;
   }
   .social-links {
     margin-top: 0.5rem;
@@ -294,9 +300,6 @@ a:focus {
     grid-template-columns: 1fr;
     grid-gap: 0.8rem 1rem;
   }
-  .highlight {
-    margin-top: -0.3rem;
-  }
   blockquote {
     font-size: 100%;
   }
@@ -310,13 +313,9 @@ a:focus {
   .skill-table {
     grid-gap: 0.8rem 0.5rem;
   }
-  .background-card h4:not(:first-child) {
-    margin-top: 1em;
-  }
   #work-projects-group {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 2fr 4fr;
-    page-break-after: always;
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1 2 auto;
   }
 }
