@@ -46,24 +46,26 @@ body {
   content: '' !important;
 }
 .name-and-profession .name {
-  font-size: 2.8rem;
   margin-bottom: 0;
 }
 .name-and-profession .job {
   margin-bottom: 0.5rem;
 }
 .hightlight-container .subtitle {
-  margin-top: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-between;
 }
 .hightlight-container {
-  margin-top: -0.3rem;
   opacity: 0.8;
+  margin-left: -1.5rem;
 }
 @media only screen {
   .container {
     display: grid;
     grid-template-columns: 15fr 50fr;
+    margin: 2rem auto;
   }
   .container .page {
     max-width: 50em;
@@ -95,8 +97,18 @@ body {
   .background-details .title {
     display: none;
   }
-  .card-nested {
-    padding: 5px 0;
+
+  .contact-detail {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .name-and-profession {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: baseline;
   }
 }
 .profile-card {
@@ -121,9 +133,6 @@ body {
 }
 .contact-details .detail .info {
   font-size: 0.8em;
-}
-.social-links {
-  margin-top: 1.5rem;
 }
 .social-link {
   padding: 0 0.6rem;
@@ -157,10 +166,11 @@ a:focus {
 .background-card h4 {
   line-height: 1.2;
   font-size: 1em;
+  border-bottom: 1px solid #000;
 }
 .background-card h4 .title {
-  background: black !important;
-  color: white !important;
+  /* background: black !important;
+  color: white !important; */
   display: inline-block;
   padding: 2px 12px 0 3px;
   font-weight: bold;
@@ -170,15 +180,16 @@ a:focus {
 }
 .card {
   background: white;
-  padding: 2em 3.5em;
+  border-width: 0;
+  /* padding: 2em 3.5em; */
 }
-.card-nested {
+/* .card-nested {
   padding: 0 0 0.8rem 2rem;
-}
-.card-nested.relax {
+} */
+/* .card-nested.relax {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
+} */
 .card-wrapper {
   padding: 5px;
 }
@@ -193,7 +204,6 @@ a:focus {
   font-size: 0.9em;
 }
 .projects {
-  padding: 1rem 0;
   margin-right: 2.5rem;
 }
 .projects .icon {
@@ -205,16 +215,19 @@ a:focus {
 .skill-table {
   display: grid;
   grid-template-columns: max-content auto;
-  grid-gap: 1.5rem 1rem;
+  grid-gap: 0.1rem 1rem;
 }
 .skill-table .name {
   font-weight: bold;
-  text-align: right;
 }
 .project-table {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem 1rem;
+}
+.education-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .print-only {
   display: none;
@@ -245,14 +258,8 @@ a:focus {
   }
 }
 @media (max-width: 769px) {
-  #work-experience {
-    margin-left: 3rem;
-  }
   .page {
     margin-top: -1.5rem;
-  }
-  .social-links {
-    margin-top: 0.5rem;
   }
   body {
     font-size: 10pt;
@@ -269,6 +276,7 @@ a:focus {
   }
   .text-muted {
     color: #777 !important;
+    margin-bottom: 0.5rem;
   }
   .text-muted * {
     color: inherit !important;
@@ -298,24 +306,18 @@ a:focus {
   .project-table {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 0.8rem 1rem;
   }
   blockquote {
     font-size: 100%;
   }
   .card-nested {
-    padding: 0.1rem 0 0.1rem 1rem;
+    padding-left: .5rem;
   }
-  .card-nested.relax {
+  /* .card-nested.relax {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
+  } */
   .skill-table {
-    grid-gap: 0.8rem 0.5rem;
-  }
-  #work-projects-group {
-    display: flex;
-    flex-direction: row-reverse;
-    flex: 1 2 auto;
+    grid-gap: 0.3rem 0.5rem;
   }
 }

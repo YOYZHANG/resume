@@ -8,8 +8,9 @@ import {resolve, dirname} from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = resolve(dirname(__filename), '../');
 
-const gist = 'https://gist.githubusercontent.com/YOYZHANG/95b887fffe3854aed019b0797e8be605/raw/resume.json'
-async function buildResumeHTML(): Promise<string> {
+const enGist = 'https://gist.githubusercontent.com/YOYZHANG/95b887fffe3854aed019b0797e8be605/raw/resume-en.json'
+const cnGist = 'https://gist.githubusercontent.com/YOYZHANG/2c156b90a775ea4c72bd66817962e379/raw/resume-cn.json'
+async function buildResumeHTML(gist: string, output: string): Promise<string> {
   await fs.remove(__dirname + '/dist')
   await fs.ensureDir(__dirname + '/dist')
   console.log(chalk.bgBlue('downloading resume from gist...'))
@@ -21,14 +22,14 @@ async function buildResumeHTML(): Promise<string> {
   const html = (await import('../src/index.js')).render(resume)
 
   console.log(chalk.bgBlue('save resume to dist...'))
-  fs.writeFileSync(__dirname + '/dist/resume.html', html, 'utf-8')
+  fs.writeFileSync(__dirname + `/dist/${output}.html`, html, 'utf-8')
 
   console.log(chalk.bgBlue('done...'))
 
   return html
 }
 
-async function convertToPDF(html: string) {
+async function convertToPDF(html: string, output: string) {
   console.log(chalk.bgBlue('open puppeter...'))
   const browser = await puppeter.launch({
     headless: "new"
@@ -51,18 +52,23 @@ async function convertToPDF(html: string) {
 
   console.log(chalk.bgBlue('save pdf to dist...'))
 
-  fs.writeFileSync(__dirname + '/dist/resume.pdf', pdfBuffer)
+  fs.writeFileSync(__dirname + `/dist/${output}.pdf`, pdfBuffer)
 
   await browser.close()
 }
 
-async function build() {
-  const html = await buildResumeHTML()
-  await convertToPDF(html)
+async function build(gist: string, output: string) {
+  const html = await buildResumeHTML(gist, output)
+  await convertToPDF(html, output)
 }
 
 
-build().catch(e => {
+build(enGist, 'resume').catch(e => {
+  console.error(chalk.red(e))
+  process.exit(1)
+})
+
+build(cnGist, 'resume-cn').catch(e => {
   console.error(chalk.red(e))
   process.exit(1)
 })

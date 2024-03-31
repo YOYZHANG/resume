@@ -22,7 +22,7 @@ export function render(resume: Record<string, unknown>): string {
       case 'maston':
         return 'ri:mastodon-fill';
       case 'link':
-          return 'ri:link';
+          return 'ri:article-line';
       default:
         return '';
     }
