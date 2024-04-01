@@ -3,4 +3,4 @@ resume.json
 resume-en.json
 resume-cn.json
 sample.resume.json
-dist/**/*
+dist

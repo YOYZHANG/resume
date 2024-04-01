@@ -83,14 +83,14 @@
         <div class="card-wrapper">
           <div class="card background-card">
 
-            <h4 id="about"></span> <span class="title">SUMMARY</span> </h4>
+            <h4 id="about"></span> <span class="title">{{toLocaleTitle 'summary'}}</span> </h4>
             <div class="card-nested" itemprop="description">
               <p> {{breaklines resume.basics.summary}} </p>
             </div>
 
             <div id="work-projects-group">
               <div id="work-experience">
-                <h4> <span class="title">WORK EXPERIENCE</span> </h4>
+                <h4> <span class="title">{{toLocaleTitle 'work_experience'}}</span> </h4>
                 <ul class="list-unstyled">
                   {{#each resume.work}}
                     <li class="card-nested relax">
@@ -130,7 +130,7 @@
               </div>
                {{#if resume.projects}}
               <div id="projects">
-                <h4><span class="title">PROJECTS</span></h4>
+                <h4><span class="title">{{toLocaleTitle 'projects'}}</span></h4>
                 <div class="list-unstyled projects">
                   <div class="project-table">
                   {{#each resume.projects}}
@@ -167,7 +167,7 @@
               {{/if}}
             </div>
 
-            <h4 id="skills"><span class="title">STACKS</span> </h4>
+            <h4 id="skills"><span class="title">{{toLocaleTitle 'stacks'}}</span> </h4>
             <div class="card-nested" itemprop="description">
               <div class="skill-table">
                 {{#each resume.skills}}
@@ -179,7 +179,7 @@
             <div class='px10'></div>
 
             <div id="education">
-              <h4><span class="title">EDUCATION</span></h4>
+              <h4><span class="title">{{toLocaleTitle 'education'}}</span></h4>
               <ul class="list-unstyled">
                 {{#each resume.education}}
                   <li class="card-nested">
@@ -316,7 +316,7 @@
             {{/if}}
 
             {{#if resume.languages}}
-            <h4 id="languages"><span class="title">LANGUAGES</span> </h4>
+            <h4 id="languages"><span class="title">{{toLocaleTitle 'languages'}}</span> </h4>
             <p class="card-nested">
               {{#each resume.languages}}
                 <span class="enumeration"><strong>{{language}}</strong> ({{fluency}})</span>
@@ -326,12 +326,12 @@
 
             <div style="text-align:center">
               <div class="detail no-print" style="margin-top:2rem;">
-                <a href="https://zxq-resume.netlify.app/resume.pdf" class="info" itemprop="pdf" target="_blank">
+                <a href="{{getPdfLinks}}" class="info" itemprop="pdf" target="_blank">
                   PDF Version
                 </a>
               </div>
                <div class="detail print-only" style="font-size:1rem;" >
-                <a href="https://zxq-resume.netlify.app" class="info" itemprop="pdf" target="_blank">
+                <a href="{{getOnlineLinks}}" class="info" target="_blank">
                   Online Version
                 </a>
               </div>

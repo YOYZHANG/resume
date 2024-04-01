@@ -7,7 +7,7 @@ import moment from 'moment';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = resolve(dirname(__filename), '../');
 
-export function render(resume: Record<string, unknown>): string {
+export function render(resume: Record<string, unknown>, locale?: string | undefined): string {
   const template = fs.readFileSync(__dirname +'/resume.hbs', 'utf8')
   const css = fs.readFileSync(__dirname + '/assets/theme.css', 'utf-8')
 
@@ -21,11 +21,48 @@ export function render(resume: Record<string, unknown>): string {
         return 'ri:twitter-fill';
       case 'maston':
         return 'ri:mastodon-fill';
+      case 'blog':
+        return 'ri:article-line';
       case 'link':
-          return 'ri:article-line';
+          return 'ri:link';
       default:
         return '';
     }
+  })
+
+  handlebars.registerHelper('toLocaleTitle', (text) => {
+    const isCn = locale === 'cn';
+    switch(text){
+      case 'summary':
+        return isCn ? '关于我' : 'SUMMARY';
+      case 'work_experience':
+        return isCn ? '工作经历' : 'WORK EXPERIENCE';
+      case 'projects':
+        return isCn ? '项目经历' : 'PROJECTS';
+      case 'stacks':
+        return isCn ? '技术栈' : 'STACKS';
+      case 'education':
+        return isCn ? '教育背景' : 'EDUCATION';
+      case 'languages':
+        return isCn ? '语言能力' : 'LANGUAGES';
+      default:
+        return text;
+    }
+  })
+
+  handlebars.registerHelper('getPdfLinks', () => {
+    const link = locale === 'cn'
+      ? 'https://zxq-resume.netlify.app/resume-cn.pdf'
+      : 'https://zxq-resume.netlify.app/resume.pdf';
+    
+    return link;
+  })
+  handlebars.registerHelper('getOnlineLinks', () => {
+    const link = locale === 'cn'
+      ? 'https://zxq-resume.netlify.app/resume-cn.html'
+      : 'https://zxq-resume.netlify.app';
+    
+    return link;
   })
 
   handlebars.registerHelper('join', function (arr) {

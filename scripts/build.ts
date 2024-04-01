@@ -10,7 +10,7 @@ const __dirname = resolve(dirname(__filename), '../');
 
 const enGist = 'https://gist.githubusercontent.com/YOYZHANG/95b887fffe3854aed019b0797e8be605/raw/resume-en.json'
 const cnGist = 'https://gist.githubusercontent.com/YOYZHANG/2c156b90a775ea4c72bd66817962e379/raw/resume-cn.json'
-async function buildResumeHTML(gist: string, output: string): Promise<string> {
+async function buildResumeHTML(gist: string, output: string, locale: string | undefined): Promise<string> {
   await fs.remove(__dirname + '/dist')
   await fs.ensureDir(__dirname + '/dist')
   console.log(chalk.bgBlue('downloading resume from gist...'))
@@ -19,7 +19,7 @@ async function buildResumeHTML(gist: string, output: string): Promise<string> {
   const resume = data
 
   console.log(chalk.bgBlue('rendering resume...'))
-  const html = (await import('../src/index.js')).render(resume)
+  const html = (await import('../src/index.js')).render(resume, locale)
 
   console.log(chalk.bgBlue('save resume to dist...'))
   fs.writeFileSync(__dirname + `/dist/${output}.html`, html, 'utf-8')
@@ -57,8 +57,8 @@ async function convertToPDF(html: string, output: string) {
   await browser.close()
 }
 
-async function build(gist: string, output: string) {
-  const html = await buildResumeHTML(gist, output)
+async function build(gist: string, output: string, locale?: string) {
+  const html = await buildResumeHTML(gist, output, locale)
   await convertToPDF(html, output)
 }
 
@@ -68,7 +68,7 @@ build(enGist, 'resume').catch(e => {
   process.exit(1)
 })
 
-build(cnGist, 'resume-cn').catch(e => {
+build(cnGist, 'resume-cn', 'cn').catch(e => {
   console.error(chalk.red(e))
   process.exit(1)
 })
