@@ -6,7 +6,8 @@
   "description": "yoyzhang's resume",
   "scripts": {
     "build": "tsx scripts/build.ts",
-    "dev": "tsx scripts/server.ts"
+    "dev": "tsx scripts/server.ts",
+    "prepare": "npx puppeteer browsers install chrome"
   },
   "author": "",
   "license": "ISC",
