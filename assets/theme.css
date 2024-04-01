@@ -65,7 +65,7 @@ body {
   .container {
     display: grid;
     grid-template-columns: 15fr 50fr;
-    margin: 2rem auto;
+    margin: 2rem;
   }
   .container .page {
     max-width: 50em;
@@ -203,8 +203,9 @@ a:focus {
   opacity: 0.6;
   font-size: 0.9em;
 }
-.projects {
-  margin-right: 2.5rem;
+
+.project {
+  margin: -1rem 0;
 }
 .projects .icon {
   margin-right: 2px;
@@ -232,6 +233,12 @@ a:focus {
 .print-only {
   display: none;
 }
+
+.list-unstyled {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
 @media only screen and (max-width: 768px) {
   .profile-card,
   .contact-details,

@@ -132,7 +132,7 @@
               <div id="projects">
                 <h4><span class="title">{{toLocaleTitle 'projects'}}</span></h4>
                 <div class="list-unstyled projects">
-                  <div class="project-table">
+                  <url class="project-table list-unstyled">
                   {{#each resume.projects}}
                     <li class="card-nested {{domClasses}}">
                       <div class="content has-sidebar">
@@ -155,7 +155,7 @@
                       </div>
                     </li>
                   {{/each}}
-                  </div>
+                  </url>
                   {{#if resume.basics.projects_url}}
                     <li class="card-nested text-muted">
                       <a href="{{resume.basics.projects_url}}" target="_blank">More Projects...</a>
