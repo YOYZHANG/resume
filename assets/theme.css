@@ -65,7 +65,7 @@ body {
   .container {
     display: grid;
     grid-template-columns: 15fr 50fr;
-    margin: 2rem;
+    margin: 2rem auto;
   }
   .container .page {
     max-width: 50em;
