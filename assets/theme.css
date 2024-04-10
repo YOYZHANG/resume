@@ -1,3 +1,14 @@
+.text-highlight {
+  background-color: #7ab1d2;
+  color: #000000;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.highlight {
+  margin-top: 1rem;
+}
 .clear-margin {
   margin: 0;
 }
@@ -35,7 +46,8 @@
   margin-bottom: 0;
 }
 body {
-  font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, 'Noto Sans SC', sans-serif;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, "Noto Sans SC",
+    sans-serif;
   color: #333;
   font-size: 16px;
 }
@@ -43,7 +55,7 @@ body {
   font-weight: bold;
 }
 .enumeration:last-child:after {
-  content: '' !important;
+  content: "" !important;
 }
 .name-and-profession .name {
   margin-bottom: 0;
@@ -166,7 +178,7 @@ a:focus {
 .background-card h4 {
   line-height: 1.2;
   font-size: 1em;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #4a90e2;
 }
 .background-card h4 .title {
   /* background: black !important;
@@ -318,7 +330,7 @@ a:focus {
     font-size: 100%;
   }
   .card-nested {
-    padding-left: .5rem;
+    padding-left: 0.5rem;
   }
   /* .card-nested.relax {
     padding-top: 1rem;

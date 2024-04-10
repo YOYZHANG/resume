@@ -85,6 +85,13 @@ export function render(resume: Record<string, unknown>, locale?: string | undefi
   
   })
 
+  handlebars.registerHelper('autoHighlight', function(text) {
+    // 将文本中的[[和]]替换为高亮的HTML标签
+    const rawText = text;
+    const highlightedText = rawText.replace(/\[\[(.*?)\]\]/g, '<span class="text-highlight">$1</span>');
+    return new handlebars.SafeString(highlightedText);
+  });
+
   return handlebars.compile(template)({
     resume: resume,
     css: css
