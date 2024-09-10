@@ -5,10 +5,21 @@
   <link rel="icon" href="" type="image/svg+xml">
   <link rel="icon" href="" type="image/png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <title>yoyzhang's resume</title>
+  <title>zhangxiaoqian's resume</title>
   <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC|Nunito+Sans:400,700&display=swap" rel="stylesheet">
-   <style>.clear-margin {
+   <style>.text-highlight {
+  background-color: #7ab1d2;
+  color: #000000;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.highlight {
+  margin-top: 1rem;
+}
+.clear-margin {
   margin: 0;
 }
 .space-top {
@@ -45,7 +56,8 @@
   margin-bottom: 0;
 }
 body {
-  font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, 'Noto Sans SC', sans-serif;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, "Noto Sans SC",
+    sans-serif;
   color: #333;
   font-size: 16px;
 }
@@ -53,27 +65,29 @@ body {
   font-weight: bold;
 }
 .enumeration:last-child:after {
-  content: '' !important;
+  content: "" !important;
 }
 .name-and-profession .name {
-  font-size: 2.8rem;
   margin-bottom: 0;
 }
 .name-and-profession .job {
   margin-bottom: 0.5rem;
 }
 .hightlight-container .subtitle {
-  margin-top: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-between;
 }
 .hightlight-container {
-  margin-top: -0.3rem;
   opacity: 0.8;
+  margin-left: -1.5rem;
 }
 @media only screen {
   .container {
     display: grid;
     grid-template-columns: 15fr 50fr;
+    margin: 2rem auto;
   }
   .container .page {
     max-width: 50em;
@@ -105,8 +119,18 @@ body {
   .background-details .title {
     display: none;
   }
-  .card-nested {
-    padding: 5px 0;
+
+  .contact-detail {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .name-and-profession {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: baseline;
   }
 }
 .profile-card {
@@ -131,9 +155,6 @@ body {
 }
 .contact-details .detail .info {
   font-size: 0.8em;
-}
-.social-links {
-  margin-top: 1.5rem;
 }
 .social-link {
   padding: 0 0.6rem;
@@ -167,10 +188,11 @@ a:focus {
 .background-card h4 {
   line-height: 1.2;
   font-size: 1em;
+  border-bottom: 1px solid #4a90e2;
 }
 .background-card h4 .title {
-  background: black !important;
-  color: white !important;
+  /* background: black !important;
+  color: white !important; */
   display: inline-block;
   padding: 2px 12px 0 3px;
   font-weight: bold;
@@ -180,15 +202,16 @@ a:focus {
 }
 .card {
   background: white;
-  padding: 2em 3.5em;
+  border-width: 0;
+  /* padding: 2em 3.5em; */
 }
-.card-nested {
+/* .card-nested {
   padding: 0 0 0.8rem 2rem;
-}
-.card-nested.relax {
+} */
+/* .card-nested.relax {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
+} */
 .card-wrapper {
   padding: 5px;
 }
@@ -202,9 +225,9 @@ a:focus {
   opacity: 0.6;
   font-size: 0.9em;
 }
-.projects {
-  padding: 1rem 0;
-  margin-right: 2.5rem;
+
+.project {
+  margin: -1rem 0;
 }
 .projects .icon {
   margin-right: 2px;
@@ -215,20 +238,29 @@ a:focus {
 .skill-table {
   display: grid;
   grid-template-columns: max-content auto;
-  grid-gap: 1.5rem 1rem;
+  grid-gap: 0.1rem 1rem;
 }
 .skill-table .name {
   font-weight: bold;
-  text-align: right;
 }
 .project-table {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem 1rem;
+}
+.education-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .print-only {
   display: none;
 }
+
+.list-unstyled {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
 @media only screen and (max-width: 768px) {
   .profile-card,
   .contact-details,
@@ -255,14 +287,8 @@ a:focus {
   }
 }
 @media (max-width: 769px) {
-  #work-experience {
-    margin-left: 3rem;
-  }
   .page {
     margin-top: -1.5rem;
-  }
-  .social-links {
-    margin-top: 0.5rem;
   }
   body {
     font-size: 10pt;
@@ -279,6 +305,7 @@ a:focus {
   }
   .text-muted {
     color: #777 !important;
+    margin-bottom: 0.5rem;
   }
   .text-muted * {
     color: inherit !important;
@@ -308,25 +335,19 @@ a:focus {
   .project-table {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 0.8rem 1rem;
   }
   blockquote {
     font-size: 100%;
   }
   .card-nested {
-    padding: 0.1rem 0 0.1rem 1rem;
+    padding-left: 0.5rem;
   }
-  .card-nested.relax {
+  /* .card-nested.relax {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
+  } */
   .skill-table {
-    grid-gap: 0.8rem 0.5rem;
-  }
-  #work-projects-group {
-    display: flex;
-    flex-direction: row-reverse;
-    flex: 1 2 auto;
+    grid-gap: 0.3rem 0.5rem;
   }
 }
 </style>
@@ -339,22 +360,33 @@ a:focus {
             <div class="profile-card">
                 <!--<div class="profile-pic">
                   <img class="media-object img-circle center-block"  data-src="holder.js/100x100"
-                    alt="zhang xiaoqian" src="" itemprop="image">
+                    alt="Zhang Xiaoqian" src="" itemprop="image">
                 </div>
                 -->
                 <div class="contact-details">
                   <div class="name-and-profession">
-                    <h3 class="text-bolder name" itemprop="name"> zhang xiaoqian</h3>
-                    <div class="text-muted job" itemprop="jobTitle">Software Engineer</div>
+                    <h3 class="text-bolder name" itemprop="name"> Zhang Xiaoqian</h3>
+                    <div class="text-muted job" itemprop="jobTitle"></div>
+                    <div class="text-muted job" itemprop="jobTitle">Web Developer</div>
                   </div>
 
+                  <div class="contact-detail">
 
-                    <div class="detail">
-                      <span class="info">
-                        <a href="mailto:alexuzhang@gmail.com" class="link-disguise" itemprop="email" target="_blank">alexuzhang@gmail.com</a>
-                      </span>
-                    </div>
+                        <div class="detail">
+                          <span class="info">
+                            <a href="mailto:alexuzhang@gmail.com" class="link-disguise" itemprop="email" target="_blank">Email: alexuzhang@gmail.com</a>
+                          </span>
+                        </div>
 
+                        <div class="detail">
+                          <a href="tel://+86 18610845887" class="link-disguise info" itemprop="telephone" target="_blank">
+                            Tel:+86 18610845887
+                          </a>
+                        </div>
+
+                  </div>
+
+                 
 
                 </div>
 
@@ -363,12 +395,12 @@ a:focus {
                      <iconify-icon icon="ri:github-fill"></iconify-icon>
                     <!--<span class="social-link-text print-only">yoyzhang</span>-->
                   </a>
-                  <a class="social-link icon" href="https://www.linkedin" target="_blank">
+                  <a class="social-link icon" href="https://linkedin.com/in/zhang-xiaoqian-185054296" target="_blank">
                      <iconify-icon icon="ri:linkedin-fill"></iconify-icon>
                     <!--<span class="social-link-text print-only">zhangxiaoqian</span>-->
                   </a>
-                  <a class="social-link icon" href="https://twitter.com/alexu19049062" target="_blank">
-                     <iconify-icon icon="ri:twitter-fill"></iconify-icon>
+                  <a class="social-link icon" href="https://blog.zhangxiaoqian.me" target="_blank">
+                     <iconify-icon icon="ri:article-line"></iconify-icon>
                     <!--<span class="social-link-text print-only">alexu</span>-->
                   </a>
               </div>
@@ -384,7 +416,7 @@ a:focus {
 
             <h4 id="about"></span> <span class="title">SUMMARY</span> </h4>
             <div class="card-nested" itemprop="description">
-              <p> My name is Zhangxiaoqian, a software engineer focusing on compiler and AI subjects. I take great care of the code quality of my projects. I wish to create great things that are beneficial to others.  </p>
+              <p> Currently working at Baidu, focusing on the compilation and performance optimization of mini programs, with 5 years of frontend experience across multiple large-scale frontend projects. Enjoys solving challenging problems and emphasizes code quality, hoping to create things that are beneficial to others. </p>
             </div>
 
             <div id="work-projects-group">
@@ -404,21 +436,52 @@ a:focus {
                         </p>
                         <p></p>
                           <div class="hightlight-container">
-                              <p class="subtitle">Mini-program development tool development:</p>
-                              <ul class='highlight'>
-                                    <li> Developed a new compilation architecture result in  85% faster compilation time as a core member </li>
-                                    <li> Improved compression performance using esbuild and multi-threaded terser, resulting in a 77% performance improvement </li>
-                              </ul>
-                              <p class="subtitle">Low-code SDK for AI plugins:</p>
-                              <ul class='highlight'>
-                                    <li> Supported developers to make custom plugin UI by writing JSON ,running on multiple AI models </li>
-                              </ul>
-                              <p class="subtitle">Mini Program Runtime Framework Development:</p>
-                              <ul class='highlight'>
-                                    <li> Improved performance by preloading resources and optimization of components. </li>
-                                    <li> Enhanced the error monitoring system for the framework </li>
-                                    <li> Addressed 230+ issues reported by developers. </li>
-                              </ul>
+                            <ul>
+                                <p class="subtitle">
+                                  <strong><a href="https://mp.weixin.qq.com/s/NL7lnmzUEXFFPC9CUY9FUg" target="_blank">Mini Program Developer Tools - Compilation</a></strong>
+                                  <span>
+                                      <small>(Node.js, Esbuild, Pkg)</small>
+                                      <small>2022.4 - 2023.10</small> - 
+                                      <small>Core Developer</small>
+                                  </span>
+                                </p>
+                                <small>The compilation of mini programs is a critical aspect of the simulation, debugging, localization, and preview release process in mini program development. I participated in designing the new compilation architecture and independently implemented complex compilation processes for entries and CSS.</small>
+                                <ul class='highlight'>
+                                      <li> Addressed issues with compilation performance and stability; improved performance by introducing concurrency and merging multiple AST parses, resulting in an 85% increase in full compilation performance and a 70% increase in incremental compilation speed. </li>
+                                      <li> Optimized code; developed more granular features of the PostCSS plugin, optimizing the CSS processing flow. </li>
+                                      <li> Resolved packaging performance issues; utilized Esbuild and multi-threaded Terser to optimize mini program packaging performance. Summarized best practices for multi-thread compression, resulting in a 77% increase in compression performance. </li>
+                                </ul>
+                                    <div style="background-color: #4A90E2;height: 1px;margin-top: 1rem; "></div>
+                                <p class="subtitle">
+                                  <strong><a href="https://yiyan.baidu.com/developer/doc#Dlran4ibr" target="_blank">Low-code SDK for ERNIE Bot</a></strong>
+                                  <span>
+                                      <small>(Rollup, San, Less)</small>
+                                      <small>2023.10 - present</small> - 
+                                      <small>Leader</small>
+                                  </span>
+                                </p>
+                                <small>A low-code framework for developers of the ERNIE Bot. Developers can generate plugin UIs through JSON config. Currently integrated on multiple large model platforms at Baidu; as the project leader, I finalized the architecture design and constructed the project from the ground up.</small>
+                                <ul class='highlight'>
+                                      <li> Supported developers to create custom plugin UIs by coding JSON, running on multiple AI models. </li>
+                                      <li> Supported UI components such as markdown, dynamic charts, and biomolecules. </li>
+                                      <li> Integrated with CI/CD pipeline and testing. </li>
+                                </ul>
+                                    <div style="background-color: #4A90E2;height: 1px;margin-top: 1rem; "></div>
+                                <p class="subtitle">
+                                  <strong><a href="https://smartprogram.baidu.com/docs/develop/framework/app_service/" target="_blank">Mini Program Runtime Framework</a></strong>
+                                  <span>
+                                      <small></small>
+                                      <small>2020.4 - 2022.4</small> - 
+                                      <small>Core Developer</small>
+                                  </span>
+                                </p>
+                                <small></small>
+                                <ul class='highlight'>
+                                      <li> Improved performance by preloading resources and optimization of components. </li>
+                                      <li> Enhanced the error monitoring system for the framework. </li>
+                                      <li> Addressed 230+ issues reported by developers. </li>
+                                </ul>
+                            </ul>
                           </div> 
                       </div>
 
@@ -426,22 +489,38 @@ a:focus {
                 </ul>
               </div>
               <div id="projects">
-                <h4><span class="title">Personal Projects</span></h4>
+                <h4><span class="title">PROJECTS</span></h4>
                 <div class="list-unstyled projects">
-                  <div class="project-table">
+                  <url class="project-table list-unstyled">
                     <li class="card-nested ">
                       <div class="content has-sidebar">
                         <p class="clear-margin-sm" itemprop="award">
-                          <strong>vs-emoji-intellisens</strong>&nbsp
-                            <a href="https://github.com/YOYZHANG/vs-emoji-intellisense" class='icon' target="_blank">
+                          <strong>zone: a mastodon client</strong>&nbsp
+                            <a href="https://github.com/YOYZHANG/zone" class='icon' target="_blank">
                               <iconify-icon icon="ri:github-fill"></iconify-icon>
                             </a>
-                            <a href="marketplace.visualstudio.com/items?itemName&#x3D;zhangxiaoqian.emoji-intellisense&amp;ssr&#x3D;false#overview" class='icon' target="_blank">
+                            <a href="https://mastodon-zone.netlify.app" class='icon' target="_blank">
                               <iconify-icon icon="ri:link"></iconify-icon>
                             </a>
                         </p>
                         <p class="text-muted">
-                          <small> Provides intellisense, search and preview of emoji. </small>
+                          Developing with React：A nimble Mastodon web client, support the most common use cases. 
+                        </p>
+                      </div>
+                    </li>
+                    <li class="card-nested ">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm" itemprop="award">
+                          <strong>vs-emoji-intellisense</strong>&nbsp
+                            <a href="https://github.com/YOYZHANG/vs-emoji-intellisense" class='icon' target="_blank">
+                              <iconify-icon icon="ri:github-fill"></iconify-icon>
+                            </a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName&#x3D;zhangxiaoqian.emoji-intellisense&amp;ssr&#x3D;false#overview" class='icon' target="_blank">
+                              <iconify-icon icon="ri:link"></iconify-icon>
+                            </a>
+                        </p>
+                        <p class="text-muted">
+                          Vscode Extension: Provides intellisense, search and preview of emoji.
                         </p>
                       </div>
                     </li>
@@ -457,47 +536,41 @@ a:focus {
                             </a>
                         </p>
                         <p class="text-muted">
-                          <small> An online code Editor for San. </small>
+                          Developing with Vue：An online code Editor for San.
                         </p>
                       </div>
                     </li>
-                    <li class="card-nested ">
-                      <div class="content has-sidebar">
-                        <p class="clear-margin-sm" itemprop="award">
-                          <strong>miniProgram runtime on quickjs</strong>&nbsp
-                        </p>
-                        <p class="text-muted">
-                          <small> An online code Editor for San. </small>
-                        </p>
-                      </div>
-                    </li>
-                  </div>
-                    <li class="card-nested text-muted">
-                      <a href="https://blog.zhangxiaoqian.me/project" target="_blank">More Projects...</a>
-                    </li>
+                  </url>
                   <div class='px10'></div>
                 </div>
               </div>
             </div>
 
-            <h4 id="skills"><span class="title">Stacks</span> </h4>
+            <h4 id="skills"><span class="title">STACKS</span> </h4>
             <div class="card-nested" itemprop="description">
               <div class="skill-table">
                     <div class='name'>Frontend</div> 
-                    <div>TypeScript, JavaScript, React, Vue, Node, Vite</div>
+                    <div>TypeScript, JavaScript, React, Vue, Vite, UnoCSS</div>
+                    <div class='name'>Backend</div> 
+                    <div>Node, Serverless</div>
+                    <div class='name'>DevOps</div> 
+                    <div>AWS, Azure</div>
+                    <div class='name'>Languages</div> 
+                    <div>Java, C/C++</div>
               </div>
             </div>
             <div class='px10'></div>
 
             <div id="education">
-              <h4><span class="title">Education</span></h4>
+              <h4><span class="title">EDUCATION</span></h4>
               <ul class="list-unstyled">
                   <li class="card-nested">
-                    <div class="content has-sidebar">
+                    <div class="content has-sidebar education-display">
                       <p class="clear-margin-sm">
-                        <strong> Geographic Information System, Master of Science</strong>,&nbsp;
+                        <strong> GIS, Master of Science</strong>,&nbsp;
                         Wuhan University, Wuhan
                       </p>
+                      <div style="flex: 1 1 auto;"></div>
                       <p class="text-muted clear-margin-sm">
                         <small>
                           Sep 2016 -  Jun 2019 
@@ -511,11 +584,12 @@ a:focus {
                     </div>
                   </li>
                   <li class="card-nested">
-                    <div class="content has-sidebar">
+                    <div class="content has-sidebar education-display">
                       <p class="clear-margin-sm">
-                        <strong> Geographic Information System, Bachelor of Science</strong>,&nbsp;
+                        <strong> GIS, Bachelor of Science</strong>,&nbsp;
                         Wuhan University, Wuhan
                       </p>
+                      <div style="flex: 1 1 auto;"></div>
                       <p class="text-muted clear-margin-sm">
                         <small>
                           Sep 2012 -  Jun 2016 
@@ -537,7 +611,7 @@ a:focus {
 
 
 
-            <h4 id="languages"><span class="title">Languages</span> </h4>
+            <h4 id="languages"><span class="title">LANGUAGES</span> </h4>
             <p class="card-nested">
                 <span class="enumeration"><strong>Chinese</strong> (Native speaker)</span>
                 <span class="enumeration"><strong>English</strong> (Fluent)</span>
@@ -545,12 +619,12 @@ a:focus {
 
             <div style="text-align:center">
               <div class="detail no-print" style="margin-top:2rem;">
-                <a href="https://resume.zhangxiaoqian.me/resume.pdf" class="info" itemprop="pdf" target="_blank">
+                <a href="https://zxq-resume.netlify.app/resume.pdf" class="info" itemprop="pdf" target="_blank">
                   PDF Version
                 </a>
               </div>
-               <div class="detail print-only" style="font-size:1.5rem;margin-top:2rem;" >
-                <a href="https://resume.zhangxiaoqian.me" class="info" itemprop="pdf" target="_blank">
+               <div class="detail print-only" style="font-size:1rem;" >
+                <a href="https://zxq-resume.netlify.app" class="info" target="_blank">
                   Online Version
                 </a>
               </div>

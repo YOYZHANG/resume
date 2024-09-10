@@ -1,140 +1,207 @@
 {
   "basics": {
-    "name": "zhang xiaoqian",
-    "picture": "",
-    "label": "Software Engineer",
-    "headline": "The hymn of humanity is the hymn of courage.",
-    "summary": "My name is Zhangxiaoqian, a software engineer currently working at Baidu, focusing on the Mini Program runtime framework and compiler. ",
-    "website": "https://blog.zhangxiaoqian.me",
-    "address": "",
-    "projects_url": "https://blog.zhangxiaoqian.me/project",
-    "username": "zhangxiaoqian",
-    "email": "alexuzhang@gmail.com",
-    "profiles": [
-      {
-        "network": "GitHub",
-        "username": "yoyzhang",
-        "url": "https://github.com/YOYZHANG"
-      },
-      {
-        "network": "LinkedIn",
-        "url": "https://www.linkedin",
-        "username": "zhangxiaoqian"
-      },
-      {
-        "network": "Twitter",
-        "url": "https://twitter.com/alexu19049062",
-        "username": "alexu"
-      },
-      {
-        "network": "maston",
-        "username": "beans",
-        "url": "https://mastodon.social/@zhangxiaoqian"
-      }
-    ]
+  "name": "张晓倩",
+  "picture": "",
+  "label": "高级前端工程师",
+  "age": "1994",
+  "headline": "The hymn of humanity is the hymn of courage.",
+  "summary": "校招入职百度智能小程序研发部(北京)，4年以上工作经验。从事小程序编译器、小程序运行时框架方向。有多个大型项目的设计和开发经历。不局限于前端，能够快速上手新的技术领域，对大语言模型应用、混合开发、数据分析均有了解。绩效连续两年 M+ (前 20%)。目前居住于杭州。",
+  "phone": "13026302401",
+  "address": "",
+  "username": "zhangxiaoqian",
+  "email": "alexuzhang@gmail.com",
+  "blog": "https://bento.me/zhangxiaoqian"
   },
   "skills": [
-    {
-      "keywords": [
-        "TypeScript",
-        "JavaScript",
-        "React",
-        "Vue",
-        "Node",
-        "Vite"
-      ],
-      "level": "Senior",
-      "name": "Frontend"
-    }    
+  {
+  "keywords": [
+  "TypeScript",
+  "JavaScript",
+  "React",
+  "Vue",
+  "Vite",
+  "UnoCSS"
+  ],
+  "level": "Senior",
+  "name": "Frontend"
+  },
+  {
+  "keywords": [
+  "Node",
+  "Serverless"
+  ],
+  "level": "Senior",
+  "name": "Backend"
+  },
+  {
+  "keywords": [
+  "AWS",
+  "Azure"
+  ],
+  "level": "Senior",
+  "name": "DevOps"
+  },
+  {
+  "keywords": [
+  "Java",
+  "C/C++"
+  ],
+  "level": "Senior",
+  "name": "Languages"
+  }
   ],
   "projects": [
-    {
-      "name": "vitest/vitest",
-      "displayName": "Vitest",
-      "summary": "A blazing fast unit test framework powered by Vite.",
-      "website": "https://vitest.dev/",
-      "githubUrl": "https://github.com/vitest-dev/vitest",
-      "primaryLanguage": "TypeScript"
+  {
+    "name": "vector to hand drawn ",
+    "displayName": "zone: a mastodon client",
+    "website": "https://www.figma.com/community/plugin/1403358417813653484/vector-to-hand-drawn",
+    "summary": "一键将矢量图像无缝转换为手绘风格图像的 Figma 插件",
+    "primaryLanguage": "React"
     },
-    {
-      "name": "vitest/vitest1",
-      "displayName": "Vitest",
-      "summary": "A blazing fast unit test framework powered by Vite.",
-      "website": "https://vitest.dev/",
-      "githubUrl": "https://github.com/vitest-dev/vitest",
-      "primaryLanguage": "TypeScript"
-    }
+  {
+  "name": "zone ",
+  "displayName": "zone: a mastodon client",
+  "website": "https://mastodon-zone.netlify.app",
+  "githubUrl": "https://github.com/YOYZHANG/zone",
+  "summary": "一个小巧的 Mastodon web 客户端，支持查看时间线，撰写帖子等基本功能。",
+  "primaryLanguage": "React"
+  },
+  {
+  "name": "vs-emoji-intellisense",
+  "displayName": "vs-emoji-intellisense",
+  "summary": "一个提供表情符号的智能提示、搜索和预览功能的 vscode 插件。",
+  "website": "https://marketplace.visualstudio.com/items?itemName=zhangxiaoqian.emoji-intellisense&ssr=false#overview",
+  "githubUrl": "https://github.com/YOYZHANG/vs-emoji-intellisense",
+  "primaryLanguage": "TypeScript"
+  },
+  {
+  "name": "san playground",
+  "displayName": "san playground",
+  "summary": "基于 vue 开发：San 的在线代码编辑器。",
+  "website": "https://playground.zhangxiaoqian.me/",
+  "githubUrl": "https://github.com/YOYZHANG/san-playground",
+  "primaryLanguage": "Vue"
+  }
   ],
   "work": [
-    {
-      "company": "Baidu",
-      "position": "Software Engineer",
-      "website": "https://baidu.com/",
-      "location": "Beijing, China",
-      "isCurrentRole": true,
-      "startDate": "2019-07-01",
-      "start": {
-        "year": 2019,
-        "month": 7
-      },
-      "end": {},
-      "highlights": [
-        "Authored the redesign and development of the Mini Program compilation architecture",
-        "Authored a  sdk that generate plugins for ai hosts according to a set of protocols",
-        "Enhance the performance of the Mini Program to achieve instant loading."
-      ]
-    }
+  {
+  "company": "百度",
+  "position": "前端",
+  "website": "https://baidu.com/",
+  "location": "北京",
+  "isCurrentRole": true,
+  "startDate": "2019-07-01",
+  "endDate": "2024-06-01",
+  "start": {
+  "year": 2019,
+  "month": 7
+  },
+  "end": {
+    "year": 2024,
+    "month": 6
+  },
+  "highlights": [
+  {
+  "topic": "小程序编译器",
+  "website": "https://mp.weixin.qq.com/s/NL7lnmzUEXFFPC9CUY9FUg",
+  "startTime": "2022.4",
+  "endTime": "2023.10",
+  "skills": "(Node, Postcss, Babel, Esbuild, Pkg)",
+  "role": "核心开发",
+  "summary": "小程序编译器是将小程序源码编译为特定文件，使小程序能够在模拟器和真机中运行。作为核心成员（共4人），我参与了编译器架构的重构工作，旨在解决编译时间过长和编译过程卡顿的问题， 最终实现了全量编译速度较之前提升了 2-7 倍。在项目中，我主要负责实现 Entry 部分和 CSS 文件的编译。",
+  "keypoints": [
+    "参与整体框架选型与架构设计；提出并实践通过多线程、按需编译、去除无效构建等方式来提升编译性能。",
+    "完成大量 CSS 编译优化工作；对 CSS 编译做了构建时标记优化，减少 bundle 合并耗时。",
+    "创新性引入 Esbuild 优化压缩性能； 将线上打包从 Terser 平滑迁移为 Esbuild，通过学习 Esbuild 源码解决迁移过程中棘手问题。"
+  ]
+  },
+  {
+  "topic": "文心一言插件 UI SDK",
+  "website": "https://yiyan.baidu.com/developer/doc#Dlran4ibr",
+  "startTime": "2023.10",
+  "endTime": "2024.5",
+  "skills": "(Rollup, San, Less)",
+  "role": "负责人",
+  "summary": "UI SDK 用于声明插件的 UI 信息。使开发者只需配置 ui.json 文件，即可在插件分发端（文心一言、文心智能体平台等）展示出一致的 UI 效果。 我是此项目的前端负责人，主导了整体的方案设计与代码实现。",
+  "isCurrent": true,
+  "keypoints": [
+  "从 0 到 1，主导设计并开发 UI SDK；带领 4 人团队通过技术评审和跨部门协作，实现接口和组件设计的最佳实践。",
+  "深度理解 AI 业务，完成核心功能的设计与开发; 包括支持展示流式文本，事件行为与组件绑定，数据映射等。",
+  "积极推动各 AI 分发端（文心一言客户端与 WEB 端，搜索侧，文心智能体平台）接入 UI SDK；统一插件 UI 展示。"
+  ]
+  },
+  {
+  "topic": "小程序框架性能与业务方向",
+  "skills": "(Typescript, Webpack)",
+  "role": "核心开发",
+  "summary": "小程序框架是指运行在客户端上的脚本文件，旨在运行小程序并管理小程序的路由和生命周期等。我主要负责小程序框架的性能优化和关键业务迭代。",
+  "website": "https://smartprogram.baidu.com/docs/develop/framework/app_service/",
+  "startTime": "2020.4",
+  "endTime": "2022.4",
+  "keypoints": [
+  "全流程性能摸底，发现其资源加载耗时为性能瓶颈；通过<b>预加载高频页面资源</b>的方式，优化<b>启动性能 50-200ms。</b>",
+  "完善开源宿主场景的支持: <b>支持无 v8 内核宿主下的 API 实现</b>；打通小米，华为的<b>登录流程</b>。助力更多开源宿主接入小程序。",
+  "探索底层创新性性能优化方案；调研将小程序底层<b> v8 替换为 quickjs 引擎</b>，旨在解决开源宿主 v8 引擎冷启耗时过长问题。"
+  ]
+  },
+  {
+  "topic": "小程序框架质量",
+  "skills": "",
+  "role": "核心开发",
+  "summary": "小程序具有数亿级别的日均访问，因此小程序框架的质量监控非常重要。在此方向，我负责对重要场景增设监控，对日志增加分析手段，在复杂问题排查和日志建设上积攒了丰富的经验。",
+  "startTime": "2020.9",
+  "endTime": "2021.4",
+  "keypoints": [
+  "排查并解决无法稳定在线下复现棘手的 JSError 问题，结合数据分析和代码还原来定位并解决问题；助力到达率提升至 97%",
+  "对<b>支付、登录、用户信息</b>等重要场景，建立监控和用户反馈通路。协同B端建立监控，协同O端反馈问题到开发者，形成<b>发现问题-解决问题的闭环。</b>",
+  "善于基于线上错误日志，排查并解决难以线下复现的棘手线上问题。高效解决开发者反馈的<b>小程序框架问题 230+ 个</b>。"
+  ]
+  }
+  ]
+  }
   ],
   "education": [
-    {
-      "institution": "Wuhan University, Wuhan",
-      "area": "Geographic Information System",
-      "studyType": "Master of Science",
-      "startDate": "2016-09-01",
-      "endDate": "2019-06-01",
-      "start": {
-        "year": 2016,
-        "month": 9
-      },
-      "end": {
-        "year": 2019,
-        "month": 6
-      },
-      "description": "",
-      "activities": "",
-      "gpa": "",
-      "courses": []
-    },
-    {
-      "institution": "Wuhan University, Wuhan",
-      "area": "Geographic Information System",
-      "studyType": "Bachelor of Science",
-      "startDate": "2012-09-01",
-      "endDate": "2016-06-01",
-      "start": {
-        "year": 2012,
-        "month": 9
-      },
-      "end": {
-        "year": 2016,
-        "month": 6
-      },
-      "description": "",
-      "activities": "",
-      "gpa": "",
-      "courses": []
-    }
+  {
+  "institution": "武汉大学",
+  "area": "GIS",
+  "studyType": "硕士",
+  "startDate": "2016-09-01",
+  "endDate": "2019-06-01",
+  "start": {
+  "year": 2016,
+  "month": 9
+  },
+  "end": {
+  "year": 2019,
+  "month": 6
+  },
+  "description": "",
+  "activities": "",
+  "gpa": "",
+  "courses": []
+  },
+  {
+  "institution": "武汉大学",
+  "area": "GIS",
+  "studyType": "本科",
+  "startDate": "2012-09-01",
+  "endDate": "2016-06-01",
+  "start": {
+  "year": 2012,
+  "month": 9
+  },
+  "end": {
+  "year": 2016,
+  "month": 6
+  },
+  "description": "",
+  "activities": "",
+  "gpa": "",
+  "courses": []
+  }
   ],
   "volunteer": [],
-  "languages": [
-    {
-      "language": "Chinese",
-      "fluency": "Native speaker"
-    }, {
-      "language": "English",
-      "fluency": "Fluent"
-    }
-  ],
+  "languages": [],
   "interests": [],
   "references": []
-}
+  }
