@@ -154,8 +154,9 @@
                   {{#each resume.projects}}
                     <li class="card-nested {{domClasses}}">
                       <div class="content has-sidebar">
-                        <p class="clear-margin-sm" itemprop="award">
-                          <strong>{{displayName}}</strong>&nbsp
+                        <p class="text-muted">
+                          <span class="clear-margin-sm" itemprop="award">
+                          <strong>{{name}}</strong>&nbsp
                           {{#if githubUrl}}
                             <a href="{{githubUrl}}" class='icon' target="_blank">
                               <iconify-icon icon="{{toSocialIcon 'GitHub'}}"></iconify-icon>
@@ -166,9 +167,14 @@
                               <iconify-icon icon="{{toSocialIcon 'link'}}"></iconify-icon>
                             </a>
                           {{/if}}
+                          <span>
                         </p>
-                        <p class="text-muted">
+                        <p class="text-muted" style="font-size: 14px">
                           {{summary}}
+                        </p>
+                        <p class="github-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="ri:star-fill" style="vertical-align: -0.125em; transform: rotate(360deg);"><path fill="currentColor" d="m12 18.26l-7.053 3.948l1.575-7.928L.588 8.792l8.027-.952L12 .5l3.385 7.34l8.027.952l-5.934 5.488l1.575 7.928z"></path></svg>
+                            <span class="stars">{{stars}}</span>
                         </p>
                       </div>
                     </li>
